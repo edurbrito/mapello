@@ -1,0 +1,37 @@
+<lsf>
+    <initials>
+        <reference length="2" />
+        <root id="bonusBoard" />
+    </initials>
+
+    <textures>
+    </textures>
+
+    <materials>
+        <material id="bonusBoardDefaultMaterial">
+            <shininess value="10" />
+            <ambient r="0.0" g="0.0" b="0.0" a="1.0"/>
+            <diffuse r="0.1" g="0.1" b="0.1" a="1.0"/>
+            <specular r="0.1" g="0.1" b="0.1" a="1.0"/>
+            <emissive r="0.4" g="0.4" b="0.4" a="1.0"/>
+        </material>
+    </materials>
+
+    <nodes> <!--For 8 bonus -->
+        <node id="bonusBoard">
+            <material id="bonusBoardDefaultMaterial" />
+
+            <texture id="clear">
+                <amplification afs="1" aft="1" />
+            </texture>
+
+            <transformations>
+                <scale sx="1.1" sy="0.5" sz="8.45" /> <!-- Each tile has side 1 and 0.05 of margin -->
+            </transformations>
+
+            <descendants>
+                <leaf type="cube"/>
+            </descendants>
+        </node>
+    </nodes>
+</lsf>

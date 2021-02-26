@@ -1,0 +1,239 @@
+<lsf>
+    <initials>
+        <reference length="2" />
+        <root id="score" />
+    </initials>
+
+    <textures>
+        <texture id="woodBoardTheme1" path="./scenes/images/blackWood.jpg"/>
+        <texture id="darkWoodTheme1" path="./scenes/images/darkWood.jpg"/>
+    </textures>
+
+    <materials>
+        <material id="markerTheme1Material">
+            <shininess value="10" />
+            <ambient r="0.0" g="0.0" b="0.0" a="1.0"/>
+            <diffuse r="0.5" g="0.5" b="0.5" a="1.0"/>
+            <specular r="0.5" g="0.5" b="0.5" a="1.0"/>
+            <emissive r="0.3" g="0.3" b="0.3" a="1.0"/>
+        </material>
+    </materials>
+
+    <nodes>
+
+        <node id="score">
+            <material id="markerTheme1Material" />
+
+            <texture id="clear">
+                <amplification afs="1" aft="1" />
+            </texture>
+
+            <transformations>
+                <translation x="-6" y="2.5" z="-7"/>
+                <rotation axis="y" angle="10"/>
+                <rotation axis="x" angle="-20"/>
+            </transformations>
+
+            <descendants>
+                <noderef id="blackMarker"/>
+                <noderef id="whiteMarker"/>
+                <noderef id="playerMarker"/>
+                <noderef id="whiteTitle"/>
+                <noderef id="blackTitle"/>
+                <noderef id="vsTitle"/>
+                <noderef id="markerBoard"/>
+            </descendants>
+        </node>
+
+        <node id="whiteTitle">
+            <material id="null" />
+
+            <texture id="clear">
+                <amplification afs="1" aft="1" />
+            </texture>
+
+            <transformations>
+                <translation x="-2" y="1" z="0"/>
+                <scale sx="0.5" sy="0.5" sz="0.5"/>
+            </transformations>
+
+            <descendants>
+                <leaf type="spritetext" text="BLACK"/>
+            </descendants>
+        </node>
+
+        <node id="blackTitle">
+            <material id="null" />
+
+            <texture id="clear">
+                <amplification afs="1" aft="1" />
+            </texture>
+
+            <transformations>
+                <translation x="2" y="1" z="0"/>
+                <scale sx="0.5" sy="0.5" sz="0.5"/>
+            </transformations>
+
+            <descendants>
+                <leaf type="spritetext" text="WHITE"/>
+            </descendants>
+        </node>
+
+        <node id="vsTitle">
+            <material id="null" />
+
+            <texture id="clear">
+                <amplification afs="1" aft="1" />
+            </texture>
+
+            <transformations>
+                <translation x="0" y="1" z="0"/>
+                <scale sx="0.4" sy="0.4" sz="0.4"/>
+            </transformations>
+
+            <descendants>
+                <leaf type="spritetext" text="vs"/>
+            </descendants>
+        </node>
+
+        <node id="markerBoard">
+            <material id="null" />
+
+            <texture id="clear">
+                <amplification afs="1" aft="1" />
+            </texture>
+
+            <transformations>
+            </transformations>
+
+            <descendants>
+                <noderef id="markerWrite"/>
+                <noderef id="markerSupport"/>
+            </descendants>
+        </node>
+
+        <node id="markerWrite">
+
+            <material id="null" />
+
+            <texture id="woodBoardTheme1">
+                <amplification afs="1" aft="1" />
+            </texture>
+
+            <transformations>   
+                <translation x="0" y="0" z="-0.1"/>
+                <scale sx="7.5" sy="3.5" sz="0.1"/>
+            </transformations>
+
+            <descendants>
+                <leaf type="cube"/>
+            </descendants>
+        </node>
+
+        <node id="markerSupport">
+
+            <material id="null" />
+
+            <texture id="darkWoodTheme1">
+                <amplification afs="1" aft="1" />
+            </texture>
+
+            <transformations>
+            </transformations>
+
+            <descendants>
+                <noderef id="markerSupportFrame"/>
+                <noderef id="markerSupportLeg"/>
+            </descendants>
+        </node>
+
+        <node id="markerSupportFrame">
+
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="1.2" aft="1.2" />
+            </texture>
+
+            <transformations>
+                <translation x="0" y="0" z="-0.21"/>
+                <scale sx="8.5" sy="4.5" sz="0.1"/>
+            </transformations>
+
+            <descendants>
+                <leaf type="cube"/>
+            </descendants>
+        </node>
+
+        <node id="markerSupportLeg">
+
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="1.2" aft="1.2" />
+            </texture>
+
+            <transformations>
+                <translation x="0" y="-1.8" z="-1.4"/>
+                <rotation axis="x" angle="110"/>
+                <scale sx="8.5" sy="2.5" sz="0.1"/>
+            </transformations>
+
+            <descendants>
+                <leaf type="cube"/>
+            </descendants>
+        </node>
+
+        <node id="blackMarker">
+            <material id="null" />
+
+            <texture id="woodBoardTheme1">
+                <amplification afs="1.2" aft="1.2" />
+            </texture>
+
+            <transformations>
+                <translation x="-2" y="0" z="0"/>
+                <scale sx="0.5" sy="0.5" sz="0.5"/>
+            </transformations>
+
+            <descendants>
+                <leaf type="spritetext" text="0"/>
+            </descendants>
+        </node>
+
+        <node id="whiteMarker">
+            <material id="null" />
+
+            <texture id="clear">
+                <amplification afs="1.2" aft="1.2" />
+            </texture>
+
+            <transformations>
+                <translation x="2" y="0" z="0"/>
+                <scale sx="0.5" sy="0.5" sz="0.5"/>
+            </transformations>
+
+            <descendants>
+                <leaf type="spritetext" text="0"/>
+            </descendants>
+        </node>
+
+         <node id="playerMarker">
+            <material id="null" />
+
+            <texture id="clear">
+                <amplification afs="1.2" aft="1.2" />
+            </texture>
+
+            <transformations>
+                <translation x="0" y="-1" z="0"/>
+                <scale sx="0.5" sy="0.5" sz="0.5"/>
+            </transformations>
+
+            <descendants>
+                <leaf type="spritetext" text="Black's turn"/>
+            </descendants>
+        </node>
+
+    </nodes>
+</lsf>

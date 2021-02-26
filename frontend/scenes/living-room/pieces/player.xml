@@ -1,0 +1,74 @@
+<lsf>
+    <initials>
+        <reference length="2" />
+        <root id="player" />
+    </initials>
+
+    <textures>
+    </textures>
+
+    <materials>
+        <material id="whiteDefaultMaterial">
+            <shininess value="10" />
+            <ambient r="0.5" g="0.5" b="0.5" a="1.0"/>
+            <diffuse r="0.9" g="0.9" b="0.9" a="1.0"/>
+            <specular r="0.9" g="0.9" b="0.9" a="1.0"/>
+            <emissive r="0" g="0" b="0" a="1.0"/>
+        </material>
+        <material id="blackDefaultMaterial">
+            <shininess value="10" />
+            <ambient r="0.0" g="0.0" b="0.0" a="1.0"/>
+            <diffuse r="0" g="0" b="0" a="1.0"/>
+            <specular r="0" g="0" b="0" a="1.0"/>
+            <emissive r="0.1" g="0.1" b="0.1" a="1.0"/>
+        </material>
+    </materials>
+    
+    <nodes>
+        <node id="player">
+            <material id="blackDefaultMaterial" />
+
+            <texture id="clear">
+                <amplification afs="1" aft="1" />
+            </texture>
+
+            <transformations>
+            </transformations>
+
+            <descendants>
+                <noderef id="white"/>
+                <noderef id="black"/>
+            </descendants>
+        </node>
+
+        <node id="black">
+            <material id="null" />
+
+            <texture id="clear">
+                <amplification afs="1" aft="1" />
+            </texture>
+
+            <transformations>
+                <rotation axis="x" angle="-90" />
+            </transformations>
+            <descendants>
+                <leaf type="cylinder" height="0.2" topRadius="0.25" bottomRadius="0.25" stacks="5" slices="20"/>
+            </descendants>
+        </node>
+        <node id="white">
+            <material id="whiteDefaultMaterial" />
+
+            <texture id="clear">
+                <amplification afs="1" aft="1" />
+            </texture>
+
+            <transformations>
+                <translation x="0" y="0.2" z="0"/>
+                <rotation axis="x" angle="-90" />
+            </transformations>
+            <descendants>
+                <leaf type="cylinder" height="0.2" topRadius="0.25" bottomRadius="0.25" stacks="5" slices="20"/>
+            </descendants>
+        </node>
+    </nodes>
+</lsf>

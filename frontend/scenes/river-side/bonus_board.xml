@@ -1,0 +1,38 @@
+<lsf>
+    <initials>
+        <reference length="2" />
+        <root id="bonusBoard" />
+    </initials>
+
+    <textures>
+        <texture id="darkWoodBonusBoardTexture" path="./scenes/images/darkWood.jpg"/>
+    </textures>
+
+    <materials>
+        <material id="bonusBoardTheme1Material">
+            <shininess value="10" />
+            <ambient r="0.0" g="0.0" b="0.0" a="1.0"/>
+            <diffuse r="0.5" g="0.5" b="0.5" a="1.0"/>
+            <specular r="0.5" g="0.5" b="0.5" a="1.0"/>
+            <emissive r="0.3" g="0.3" b="0.3" a="1.0"/>
+        </material>
+    </materials>
+
+    <nodes> <!--For 8 bonus -->
+        <node id="bonusBoard">
+            <material id="bonusBoardTheme1Material" />
+
+            <texture id="darkWoodBonusBoardTexture">
+                <amplification afs="1" aft="1" />
+            </texture>
+
+            <transformations>
+                <scale sx="1.1" sy="0.5" sz="8.45" /> <!-- Each tile has side 1 and 0.05 of margin -->
+            </transformations>
+
+            <descendants>
+                <leaf type="cube"/>
+            </descendants>
+        </node>
+    </nodes>
+</lsf>

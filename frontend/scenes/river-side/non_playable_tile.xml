@@ -1,0 +1,37 @@
+<lsf>
+    <initials>
+        <reference length="2" />
+        <root id="tile" />
+    </initials>
+
+    <textures>
+        <texture id="nonPlayableTileTheme1Texture" path="./scenes/images/lightWood.jpg" />
+    </textures>
+
+    <materials>
+        <material id="nonPlayableTileTheme1Material">
+            <shininess value="8" />
+            <ambient r="0.0" g="0.0" b="0.0" a="1.0"/>
+            <diffuse r="0.6" g="0.5" b="0.5" a="1.0"/>
+            <specular r="0.6" g="0.5" b="0.5" a="1.0"/>
+            <emissive r="0.2" g="0.2" b="0.2" a="1.0"/>
+        </material>
+    </materials>
+
+    <nodes>
+        <node id="tile">
+            <material id="nonPlayableTileTheme1Material" />
+
+            <texture id="nonPlayableTileTheme1Texture">
+                <amplification afs="1" aft="1" />
+            </texture>
+
+            <transformations>
+            </transformations>
+
+            <descendants>
+                <leaf type="plane" npartsU="10" npartsV="10" />
+            </descendants>
+        </node>
+    </nodes>
+</lsf>

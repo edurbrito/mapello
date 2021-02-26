@@ -1,0 +1,20 @@
+version: "3"
+services:
+  web-gl:
+    ports:
+      - "8080:80"
+    volumes: 
+      - "./frontend/:/usr/share/nginx/html/"
+    image: "nginx:latest"
+    networks: 
+      - "pnet"
+  prolog:
+    build: "./backend/"
+    image: "prolog"
+    ports:
+      - "8081:8080"
+    networks: 
+      - "pnet"
+networks:
+  pnet:
+    driver: "bridge"

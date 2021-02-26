@@ -1,0 +1,36 @@
+<lsf>
+    <initials>
+        <reference length="2" />
+        <root id="tile" />
+    </initials>
+
+    <textures>
+    </textures>
+
+    <materials>
+        <material id="nonPlayableTileDefaultMaterial">
+            <shininess value="10" />
+            <ambient r="0.3" g="0.3" b="0.3" a="1.0"/>
+            <diffuse r="0.3" g="0.3" b="0.3" a="1.0"/>
+            <specular r="0.3" g="0.3" b="0.3" a="1.0"/>
+            <emissive r="0.3" g="0.3" b="0.3" a="1.0"/>
+        </material>
+    </materials>
+
+    <nodes>
+        <node id="tile">
+            <material id="nonPlayableTileDefaultMaterial" />
+
+            <texture id="clear">
+                <amplification afs="1" aft="1" />
+            </texture>
+
+            <transformations>
+            </transformations>
+
+            <descendants>
+                <leaf type="plane" npartsU="10" npartsV="10" />
+            </descendants>
+        </node>
+    </nodes>
+</lsf>
