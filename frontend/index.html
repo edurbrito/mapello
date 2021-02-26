@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>LAIG - Mapello</title>
+    <link rel="icon" href="data:,">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald&display=swap" rel="stylesheet">
+
+    <style>
+        body,
+        html {
+            border: 0;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #interface {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: url("assets/background.png");
+            background-size: cover;
+            z-index: 1;
+            color: white;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        #interface h1 {
+            font-weight: normal;
+            font-size: 8rem;
+            margin: 0.4rem;
+        }
+
+        #container {
+            display: none;
+        }
+
+        .box {
+            width: fit-content;
+            margin: 1rem;
+        }
+
+        #players {
+            display: flex;
+        }
+
+        #board {
+            margin-top: 0;
+        }
+
+        #play {
+            margin: 1rem;
+            width: 50%;
+            cursor: pointer;
+        }
+
+        label {
+            font-size: medium;
+            padding: 0.2rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .box>select,
+        #play {
+            border: 0.4rem solid white;
+            padding: 0.4rem;
+            color: white;
+            background-color: #FF8B9E;
+            text-transform: uppercase;
+            font-size: x-large;
+            cursor: pointer;
+        }
+
+        .invisible {
+            visibility: hidden;
+        }
+
+        #progress-bar {
+            width: 50%;
+            background-color: white;
+        }
+
+        #bar {
+            width: 0%;
+            height: 30px;
+            background-color: #FF8B9E;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="interface" class="center">
+        <h1>MAPELLO</h1>
+        <form id="container" class="center" onsubmit="event.preventDefault(); initGame();">
+            <div id="players">
+                <div class="box center invisible" id="level-p1">
+                    <label for="level-p1">LEVEL</label>
+                    <select name="level-p1">
+                        <option value='1'>RANDOM</option>
+                        <option value='2'>GREEDY</option>
+                    </select>
+                </div>
+                <div class="box center">
+                    <label for="player-p1">TYPE</label>
+                    <select name="player-p1" id="player-p1">
+                        <option>PLAYER</option>
+                        <option>COMPUTER</option>
+                    </select>
+                </div>
+
+                <div class="box center">
+                    <h3>VS</h3>
+                </div>
+
+                <div class="box center">
+                    <label for="player-p2">TYPE</label>
+                    <select name="player-p2" id="player-p2">
+                        <option>PLAYER</option>
+                        <option>COMPUTER</option>
+                    </select>
+                </div>
+
+                <div class="box center invisible" id="level-p2">
+                    <label for="level-p2">LEVEL</label>
+                    <select name="level-p2">
+                        <option value='1'>RANDOM</option>
+                        <option value='2'>GREEDY</option>
+                    </select>
+                </div>
+
+            </div>
+            <div id="board" class="box center">
+                <label for="board">BOARD</label>
+                <select name="board">
+                    <option>DEFAULT</option>
+                    <option>RANDOM</option>
+                </select>
+            </div>
+            <input type="submit" value="PLAY" name="button" id="play">
+        </form>
+        <script>
+
+            let player1 = document.querySelector("#player-p1");
+            player1.addEventListener("change", () => {
+                let level = document.querySelector("#level-p1")
+                if (player1.value == "PLAYER") {
+                    level.style.visibility = "hidden"
+                }
+                else {
+                    level.style.visibility = "visible";
+                }
+            });
+
+            let player2 = document.querySelector("#player-p2");
+            player2.addEventListener("change", () => {
+                let level = document.querySelector("#level-p2")
+                if (player2.value == "PLAYER") {
+                    level.style.visibility = "hidden"
+                }
+                else {
+                    level.style.visibility = "visible";
+                }
+            });
+        </script>
+        <div id="progress-bar">
+            <div id="bar"></div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
