@@ -1,0 +1,43 @@
+<lsf>
+    <initials>
+        <reference length="2" />
+        <root id="tile" />
+    </initials>
+
+    <textures>
+    </textures>
+
+    <materials>
+        <material id="tileDefaultMaterial">
+            <shininess value="10" />
+            <ambient r="0.2" g="0.2" b="0.2" a="1.0"/>
+            <diffuse r="0.5" g="0.8" b="0.5" a="1.0"/>
+            <specular r="0.5" g="0.8" b="0.5" a="1.0"/>
+            <emissive r="0.2" g="0.3" b="0.2" a="1.0"/>
+        </material>
+        <material id="living-roomValidTileMaterial">
+            <shininess value="10" />
+            <ambient r="0.3" g="0.4" b="0" a="0"/>
+            <diffuse r="0.2" g="1" b="0" a="1.0"/>
+            <specular r="0.2" g="1" b="0" a="1.0"/>
+            <emissive r="0.2" g="0.8" b="0" a="1.0"/>
+        </material>
+    </materials>
+
+    <nodes>
+        <node id="tile">
+            <material id="tileDefaultMaterial" />
+
+            <texture id="clear">
+                <amplification afs="1" aft="1" />
+            </texture>
+
+            <transformations>
+            </transformations>
+
+            <descendants>
+                <leaf type="plane" npartsU="10" npartsV="10" />
+            </descendants>
+        </node>
+    </nodes>
+</lsf>

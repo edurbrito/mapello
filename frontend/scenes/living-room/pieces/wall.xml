@@ -1,0 +1,37 @@
+<lsf>
+    <initials>
+        <reference length="2" />
+        <root id="wall" />
+    </initials>
+
+    <textures>
+    </textures>
+
+    <materials>
+        <material id="wallDefaultMaterial">
+            <shininess value="10" />
+            <ambient r="0.0" g="0.0" b="0.0" a="1.0"/>
+            <diffuse r="0.6" g="0.6" b="0.6" a="1.0"/>
+            <specular r="0.6" g="0.6" b="0.6" a="1.0"/>
+            <emissive r="0.5" g="0.5" b="0.5" a="1.0"/>
+        </material>
+    </materials>
+
+    <nodes>
+        <node id="wall">
+            <material id="wallDefaultMaterial" />
+
+            <texture id="clear">
+                <amplification afs="1" aft="1" />
+            </texture>
+
+            <transformations>
+                <scale sx="0.5" sy="0.2" sz="0.5" />
+            </transformations>
+
+            <descendants>
+                 <leaf type="cube"/>
+            </descendants>
+        </node>
+    </nodes>
+</lsf>
