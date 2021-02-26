@@ -21,6 +21,8 @@ The board game elected was [Mapello](docs/MAPELLO_EN.pdf) and the tech behind th
 
 ## Demo
 
+![Demo](images/mapello.gif)
+
 ----
 
 ## Run
