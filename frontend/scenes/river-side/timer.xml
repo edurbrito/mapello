@@ -1,0 +1,96 @@
+<lsf>
+    <initials>
+        <reference length="2" />
+        <root id="clock" />
+    </initials>
+
+    <textures>
+        <texture id="woodBoardTheme1" path="./scenes/images/blackWood.jpg"/>
+        <texture id="darkWoodTheme1" path="./scenes/images/darkWood.jpg"/>
+    </textures>
+
+    <materials>
+        <material id="markerTheme1Material">
+            <shininess value="10" />
+            <ambient r="0.0" g="0.0" b="0.0" a="1.0"/>
+            <diffuse r="0.5" g="0.5" b="0.5" a="1.0"/>
+            <specular r="0.5" g="0.5" b="0.5" a="1.0"/>
+            <emissive r="0.3" g="0.3" b="0.3" a="1.0"/>
+        </material>
+    </materials>
+
+    <nodes>
+        <node id="clock">
+            <material id="markerTheme1Material" />
+
+            <texture id="clear">
+                <amplification afs="1" aft="1" />
+            </texture>
+
+            <transformations>
+                <translation x="2" y="1" z="-8"/>
+            </transformations>
+
+            <descendants>
+                <noderef id="clockWrite"/>
+                <noderef id="clockSupport"/>
+                <noderef id="timeMarker"/>
+            </descendants>
+        </node>
+
+        <node id="clockWrite">
+
+            <material id="null" />
+
+            <texture id="woodBoardTheme1">
+                <amplification afs="1" aft="1" />
+            </texture>
+
+            <transformations>   
+                <translation x="0" y="0" z="-0.1"/>
+                <scale sx="2.5" sy="1.5" sz="1"/>
+            </transformations>
+
+            <descendants>
+                <leaf type="cube"/>
+            </descendants>
+        </node>
+
+        <node id="clockSupport">
+
+            <material id="null" />
+
+            <texture id="darkWoodTheme1">
+                <amplification afs="1" aft="1" />
+            </texture>
+
+            <transformations>  
+                <translation x="0" y="0" z="-0.2"/>
+                <scale sx="3" sy="2" sz="1"/>
+            </transformations>
+
+            <descendants>
+                <leaf type="cube"/>
+            </descendants>
+
+        </node>
+
+        <node id="timeMarker">
+            <material id="null" />
+
+            <texture id="clear">
+                <amplification afs="1.2" aft="1.2" />
+            </texture>
+
+            <transformations>
+                <translation x="0" y="0" z="0.5"/>
+                <scale sx="0.8" sy="0.8" sz="0.8"/>
+            </transformations>
+
+            <descendants>
+                <leaf type="spritetext" text="60"/>
+            </descendants>
+        </node>
+
+    </nodes>
+</lsf>

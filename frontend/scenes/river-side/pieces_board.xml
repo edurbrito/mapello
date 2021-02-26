@@ -1,0 +1,38 @@
+<lsf>
+    <initials>
+        <reference length="2" />
+        <root id="piecesBoard" />
+    </initials>
+
+    <textures>
+        <texture id="darkWoodPiecesBoardTexture" path="./scenes/images/darkWood.jpg"/>
+    </textures>
+
+    <materials>
+        <material id="piecesBoardTheme1Material">
+            <shininess value="10" />
+            <ambient r="0.0" g="0.0" b="0.0" a="1.0"/>
+            <diffuse r="0.3" g="0.3" b="0.3" a="1.0"/>
+            <specular r="0.3" g="0.3" b="0.3" a="1.0"/>
+            <emissive r="0.3" g="0.3" b="0.3" a="1.0"/>
+        </material>
+    </materials>
+
+    <nodes>
+        <node id="piecesBoard">
+            <material id="piecesBoardTheme1Material" />
+
+            <texture id="darkWoodPiecesBoardTexture">
+                <amplification afs="1" aft="0.5" />
+            </texture>
+
+            <transformations>
+                <scale sx="7.4" sy="0.5" sz="8.45" /> <!-- 7x8 => 1.05*7+0.05 /  1.05*8+0.05 -->
+            </transformations>
+
+            <descendants>
+                <leaf type="cube"/>
+            </descendants>
+        </node>
+    </nodes>
+</lsf>

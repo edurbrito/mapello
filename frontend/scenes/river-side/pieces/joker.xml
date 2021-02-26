@@ -1,0 +1,38 @@
+<lsf>
+    <initials>
+        <reference length="2" />
+        <root id="joker" />
+    </initials>
+
+    <textures>
+        <texture id="jokerTheme1Texture" path="./scenes/images/mediumWood.jpg" />
+    </textures>
+
+    <materials>
+        <material id="jokerTheme1Material">
+            <shininess value="8" />
+            <ambient r="0.0" g="0.0" b="0.0" a="1.0"/>
+            <diffuse r="0.6" g="0.5" b="0.5" a="1.0"/>
+            <specular r="0.6" g="0.5" b="0.5" a="1.0"/>
+            <emissive r="0.2" g="0.2" b="0.2" a="1.0"/>
+        </material>
+    </materials>
+
+    <nodes>
+        <node id="joker">
+            <material id="jokerTheme1Material" />
+
+            <texture id="jokerTheme1Texture">
+                <amplification afs="1" aft="1" />
+            </texture>
+
+            <transformations>
+                <rotation axis="x" angle="-90" />
+            </transformations>
+
+            <descendants>
+                <leaf type="cylinder" height="0.2" topRadius="0.25" bottomRadius="0.25" stacks="5" slices="20"/>
+            </descendants>
+        </node>
+    </nodes>
+</lsf>
