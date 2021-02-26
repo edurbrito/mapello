@@ -1,0 +1,2 @@
+backend/sicstus/*
+!backend/sicstus/README.md
